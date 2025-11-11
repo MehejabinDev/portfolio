@@ -1,21 +1,24 @@
-body {
-  font-family: "Poppins", sans-serif;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
   background: linear-gradient(135deg, #0f0f0f, #1b1b1b);
   color: #f5f5f5;
   line-height: 1.6;
   scroll-behavior: smooth;
 }
 
-/* --- Header Section --- */
+/* ---------- Header ---------- */
 header {
   text-align: center;
   padding: 100px 20px 50px;
   background: transparent;
 }
 
-/* Name Styling */
 header h1 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -26,17 +29,15 @@ header h1 {
   transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Hover Effect on Name */
 header h1:hover {
   transform: scale(1.05);
   text-shadow: 0 0 25px rgba(0, 234, 255, 1);
 }
 
-/* Data Analyst Text */
 header h2 {
   font-size: 1.6rem;
   color: #9b9b9b;
-  margin: 0;
+  margin-bottom: 20px;
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -47,33 +48,76 @@ header h2:hover {
   color: #00eaff;
 }
 
-/* --- Section Titles --- */
-section h3 {
-  color: #00eaff;
-  border-bottom: 2px solid #00eaff;
-  display: inline-block;
-  margin-bottom: 15px;
-  font-size: 1.5rem;
+/* ---------- Navigation ---------- */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 15px;
 }
 
-/* --- Content Layout --- */
+nav ul li a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00eaff;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00eaff;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Section Styles ---------- */
 section {
   max-width: 900px;
   margin: 40px auto;
-  padding: 20px;
+  padding: 30px 20px;
   background: #141414;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 234, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect for Sections */
 section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(0, 234, 255, 0.3);
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.2);
 }
 
-/* --- Lists and Paragraphs --- */
+section h3 {
+  color: #00eaff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #00eaff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+p {
+  color: #dcdcdc;
+  margin-bottom: 15px;
+}
+
+/* ---------- Skills & Lists ---------- */
 ul {
   list-style: none;
   padding: 0;
@@ -82,7 +126,7 @@ ul {
 li {
   background: #1c1c1c;
   margin: 8px 0;
-  padding: 10px 15px;
+  padding: 12px 15px;
   border-radius: 8px;
   transition: background 0.3s ease, transform 0.3s ease;
 }
@@ -92,24 +136,75 @@ li:hover {
   transform: translateX(5px);
 }
 
-p {
-  margin: 10px 0;
-  color: #dcdcdc;
+/* ---------- Projects ---------- */
+.project {
+  background-color: #1e293b;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 25px 0;
+  text-align: left;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* --- Links --- */
-a {
-  color: #00eaff;
+.project h3 {
+  color: #facc15;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: #d1d5db;
+  margin-bottom: 15px;
+}
+
+.project a {
+  display: inline-block;
+  background: #facc15;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-a:hover {
-  color: #fff;
-  text-shadow: 0 0 8px #00eaff;
+.project a:hover {
+  background: #fde047;
+  transform: translateY(-3px);
 }
 
-/* --- Footer --- */
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(250, 204, 21, 0.3);
+}
+
+/* ---------- Certifications ---------- */
+.certification-card {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(250, 204, 21, 0.3);
+}
+
+/* ---------- Contact ---------- */
+#contact a {
+  color: #facc15;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #fde047;
+}
+
+/* ---------- Footer ---------- */
 footer {
   text-align: center;
   padding: 20px;
@@ -123,4 +218,32 @@ footer {
 footer:hover {
   color: #00eaff;
   transition: color 0.3s ease;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  section {
+    padding: 25px 15px;
+  }
+
+  .project {
+    padding: 20px;
+  }
+
+  .certification-card {
+    padding: 15px;
+  }
 }
