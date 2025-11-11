@@ -6,87 +6,88 @@
 }
 
 body {
-    background-color: #0d1117; /* Dark background */
-    color: #e6edf3; /* Light text for readability */
+    background-color: #0d1117; /* dark elegant background */
+    color: #e6edf3;
     line-height: 1.8;
+    font-size: 1rem;
     padding: 20px;
 }
 
 /* ---------- HEADER ---------- */
 header {
-    background: linear-gradient(135deg, #111827, #1e293b); /* Smooth gradient */
+    background: linear-gradient(135deg, #111827, #1e293b);
     color: #fff;
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
-    font-size: 2.8rem;
-    color: #facc15; /* Gold color to highlight your name */
-    letter-spacing: 1.5px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #facc15; /* soft gold highlight */
 }
 
 header p {
     font-size: 1.2rem;
     color: #9ca3af;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-/* ---------- NAVIGATION ---------- */
-nav ul {
+header nav ul {
     list-style-type: none;
+    padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     display: inline-block;
     margin: 0 20px;
 }
 
-nav ul li a {
+header nav ul li a {
     text-decoration: none;
     color: #e6edf3;
     font-weight: 500;
-    transition: color 0.3s ease, border-bottom 0.3s ease; /* ✨ Hover transition */
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #facc15; /* ✨ Gold hover */
-    border-bottom: 2px solid #facc15;
+header nav ul li a:hover {
+    color: #facc15;
 }
 
-/* ---------- SECTIONS ---------- */
+/* ---------- SECTION ---------- */
 .section {
     background: #161b22;
     margin: 60px auto;
     padding: 60px;
     border-radius: 20px;
-    max-width: 1100px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+    max-width: 1000px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
 .section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #facc15; /* Highlighted section title */
-    text-transform: uppercase;
+    color: #facc15;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .section p {
-    font-size: 1.05rem;
     color: #c9d1d9;
+    font-size: 1.05rem;
     margin-bottom: 20px;
 }
 
-/* ---------- LISTS ---------- */
+/* ---------- SKILLS & LISTS ---------- */
 ul {
     list-style-type: none;
     padding: 0;
     text-align: left;
-    max-width: 850px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -100,28 +101,28 @@ ul li strong {
 }
 
 /* ---------- PROJECTS ---------- */
-.Projects {
+.project {
     background-color: #1e293b;
     padding: 30px;
     border-radius: 15px;
     margin: 25px 0;
     text-align: left;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* ✨ Hover animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Projects h3 {
+.project h3 {
     color: #facc15;
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.Projects p {
+.project p {
     color: #d1d5db;
     margin-bottom: 15px;
 }
 
-.Projects a {
+.project a {
     display: inline-block;
     background: #facc15;
     color: #000;
@@ -132,16 +133,14 @@ ul li strong {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* ✨ Project Button Hover */
-.Projects a:hover {
+.project a:hover {
     background: #fde047;
     transform: translateY(-3px);
 }
 
-/* ✨ Project Card Hover */
-.Projects:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(250, 204, 21, 0.3);
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(250, 204, 21, 0.3);
 }
 
 /* ---------- CONTACT ---------- */
@@ -152,7 +151,7 @@ ul li strong {
 }
 
 #contact a:hover {
-    color: #fde047; /* ✨ Highlight LinkedIn hover */
+    color: #fde047;
 }
 
 /* ---------- FOOTER ---------- */
@@ -160,7 +159,7 @@ footer {
     background-color: #111827;
     color: #9ca3af;
     text-align: center;
-    padding: 25px 0;
+    padding: 20px 0;
     border-radius: 10px;
     margin-top: 40px;
     font-size: 0.95rem;
@@ -169,12 +168,7 @@ footer {
 /* ---------- RESPONSIVE DESIGN ---------- */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.2rem;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 12px 0;
+        font-size: 2rem;
     }
 
     .section {
@@ -182,7 +176,12 @@ footer {
         margin: 30px;
     }
 
-    .Projects {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .project {
         padding: 20px;
     }
 }
